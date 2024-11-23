@@ -14,16 +14,16 @@ public class DefaultDrinkInitializer {
     public CommandLineRunner initDefaultDrinks(DrinkService drinkService) {
         return args -> {
             if (drinkService.getAllDrinks().isEmpty()) {
-                drinkService.createDrink("Эспрессо", Map.of(
+                drinkService.createDrink("Espresso", Map.of(
                         "Coffee Beans", 10
                 ));
 
-                drinkService.createDrink("Американо", Map.of(
+                drinkService.createDrink("Americano", Map.of(
                         "Coffee Beans", 10,
                         "Water", 100
                 ));
 
-                drinkService.createDrink("Капучино", Map.of(
+                drinkService.createDrink("Cappuccino", Map.of(
                         "Coffee Beans", 10,
                         "Milk", 50
                 ));
