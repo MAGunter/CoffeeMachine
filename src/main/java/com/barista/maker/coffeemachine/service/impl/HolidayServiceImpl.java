@@ -21,6 +21,7 @@ public class HolidayServiceImpl implements HolidayService {
     @Value("${nager.api.url}")
     private String apiUrl;
 
+    @Override
     public List<Holiday> getHolidays(int year, String countryCode) {
         String url = String.format("%s/v3/PublicHolidays/%d/%s", apiUrl, year, countryCode);
         ResponseEntity<Holiday[]> response = restTemplate.getForEntity(url, Holiday[].class);
@@ -32,6 +33,7 @@ public class HolidayServiceImpl implements HolidayService {
         }
     }
 
+    @Override
     public boolean isHoliday(LocalDate date) {
         String countryCode = "KZ";
         int year = date.getYear();

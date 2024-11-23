@@ -9,6 +9,7 @@ import java.util.Map;
 @Service
 public interface DrinkService {
      List<Drink> getAllDrinks();
-     Drink prepareDrink(String drinkName, Map<String, Integer> recipe);
+     Drink createDrink(String drinkName, Map<String, Integer> recipe);
      Drink findByName(String name);
+     String prepareDrink(String drinkName);
 }

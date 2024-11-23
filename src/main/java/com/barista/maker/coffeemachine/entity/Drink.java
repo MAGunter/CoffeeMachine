@@ -27,5 +27,9 @@ public class Drink {
     @MapKeyColumn(name = "ingredient_name")
     @Column(name = "quantity")
     private final Map<String, Integer> recipe;
+
+    @Column(nullable = false)
+    private boolean status;
+
 }
 
