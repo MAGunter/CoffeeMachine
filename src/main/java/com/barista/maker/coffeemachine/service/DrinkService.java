@@ -12,4 +12,5 @@ public interface DrinkService {
      Drink createDrink(String drinkName, Map<String, Integer> recipe);
      Drink findByName(String name);
      String prepareDrink(String drinkName);
+     Drink getMostPopularDrink();
 }

@@ -31,5 +31,8 @@ public class Drink {
     @Column(nullable = false)
     private boolean status;
 
+    @Column(nullable = false)
+    private int preparationCount = 0;
+
 }
 
