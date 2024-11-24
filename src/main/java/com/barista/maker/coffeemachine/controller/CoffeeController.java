@@ -33,7 +33,7 @@ public class CoffeeController {
                     "if machine isn't working return bad request" +
                     "and uses ingredients to prepare drink like milk or coffee beans")
     public ResponseEntity<?> prepareDrink(@ModelAttribute("drink") Drink drink, @PathVariable String drinkName){
-        if(isWork()){
+        if(!isWork()){
             return ResponseEntity.badRequest().body("Machine isn't working now");
         }
         return ResponseEntity.ok(this.drinkService.prepareDrink(drinkName));
